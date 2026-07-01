@@ -10,6 +10,7 @@
 <style>
   :root{
     --paper:#F7F8F4;
+    --paper-rgb:247,248,244;
     --surface:#FFFFFF;
     --ink:#14181C;
     --muted:#5B6560;
@@ -31,6 +32,7 @@
 
   html[data-theme="dark"]{
     --paper:#0F1310;
+    --paper-rgb:15,19,16;
     --surface:#171C18;
     --ink:#ECEFEA;
     --muted:#9BA69E;
@@ -92,7 +94,7 @@
   /* ---------- NAV ---------- */
   header.site-nav{
     position:sticky;top:0;z-index:50;
-    background:rgba(247,248,244,0.88);
+    background:rgba(var(--paper-rgb),0.88);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
@@ -180,7 +182,7 @@
     font-family:var(--mono);font-size:12.5px;color:var(--muted);
     padding:12px 20px;border-bottom:1px solid var(--line);
     display:flex;align-items:center;justify-content:space-between;
-    background:linear-gradient(180deg,#FBFCFA,#F7F8F4);
+    background:linear-gradient(180deg,var(--surface),var(--paper));
     flex-wrap:wrap;gap:8px;
   }
   .req-line .path{color:var(--ink);}
@@ -267,7 +269,7 @@
     gap:16px;flex-wrap:wrap;cursor:pointer;
     border-bottom:1px solid transparent;
   }
-  .project-head:hover{background:#FCFCFA;}
+  .project-head:hover{background:var(--paper);}
   .project-title-wrap{display:flex;align-items:center;gap:14px;}
   .project-num{
     font-family:var(--mono);font-size:12px;color:var(--muted-2);
@@ -408,7 +410,7 @@
     width:100%;padding:11px 13px;border:1px solid var(--line-strong);border-radius:7px;
     font-family:var(--body);font-size:14px;background:var(--paper);color:var(--ink);
   }
-  .form-row input:focus,.form-row textarea:focus{outline:none;border-color:var(--jade);background:#fff;}
+  .form-row input:focus,.form-row textarea:focus{outline:none;border-color:var(--jade);background:var(--surface);}
   .form-row textarea{resize:vertical;min-height:100px;}
   .form-note{font-family:var(--mono);font-size:11.5px;color:var(--muted-2);margin-top:12px;}
   .form-status{font-family:var(--mono);font-size:12px;color:var(--jade-dark);margin-top:10px;min-height:16px;}
